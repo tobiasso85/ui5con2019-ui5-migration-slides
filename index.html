@@ -76,6 +76,39 @@
 				background-repeat: no-repeat;
 				background-size: contain;
 			}
+			.ui5-con-image {
+				width: 400px;
+				height: 100%;
+				right: 0;
+				position: absolute;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			.reveal table td.tdleft {
+				text-align: right;
+			}
+			.ui5con-slide1 {
+				background-image: url(images/slide1.png);
+			}
+			.ui5con-slide2 {
+				background-image: url(images/slide2.png);
+			}
+			.ui5con-slide3 {
+				background-image: url(images/slide3.png);
+			}
+			.ui5con-slide4 {
+				background-image: url(images/slide4.png);
+			}
+			.ui5con-slide7 {
+				background-image: url(images/slide7.png);
+			}
+			.ui5con-slide9 {
+				background-image: url(images/slide9.png);
+			}
+			.emphasized {
+				font-weight: bold;
+				font-size: 7rem;
+			}
 			.ui5con-aligntop .ui5con-logo {
 				top: 44%;
 			}
@@ -110,71 +143,148 @@
 
 				<section data-background-color="#000">
 					<div class="ui5con-title ui5con-left">
-						<div>#Title Goes Here#</div>
-						<div class="ui5con-orange">#and Here and Here#</div>
+						<div>Migration Tooling</div>
+						<div class="ui5con-orange">for UI5 Evolution</div>
 					</div>
-					
+
 					<div class="ui5con-logo"></div>
 
 					<div class="ui5con-speakertitle">
-						#Speaker’s Name, Company#<br>
-						June 28, 2019			
+						Tobias Sorn, SAP
+						<br>
+						June 28, 2019
 					</div>
 				</section>
 
+				<section>
+					<h3>Motivation</h3>
+					The one constant in software development:
+					<p class="fragment"><span class="emphasized">Change</span></p>
+					<div class="ui5con-slide1 ui5-con-image"></div>
+				</section>
+
+				<section>
+					<h3>Change in UI5 (Evolution)</h3>
+					<ul>
+						<li>Use AMD</li>
+						<li>Perform async calls</li>
+						<li>Remove global variables (e.g. Decoupling of jQuery)</li>
+						<li>Use native browser functionality if possible</li>
+						<li>Split modules into smaller chunks</li>
+
+					</ul>
+					<div class="ui5con-slide2 ui5-con-image"></div>
+				</section>
+
+				<section>
+					<h3>Change in app coding</h3>
+					<ol>
+						<li>Read documentation and blog posts
+						<ul>
+							<li><a href="https://blogs.sap.com/2018/12/17/ui5ers-buzz-40-ui5-evolution-the-modular-core/">ui5ers-buzz-40</a> </li>
+							<li><a href="https://blogs.sap.com/2018/11/19/ui5ers-buzz-38-modularization-of-the-sapui5-core/">ui5ers-buzz-38</a> </li>
+							<li><a href="https://openui5.hana.ondemand.com/#/topic/00737d6c1b864dc3ab72ef56611491c4">SDK documentation 1</a> </li>
+							<li><a href="https://openui5.hana.ondemand.com/#/topic/a075ed88ef324261bca41813a6ac4a1c.html">SDK documentation 2</a> </li>
+						</ul>
+						</li>
+						<li>Identify places in your code</li>
+						<li>Modify your code</li>
+						<li>Hope</li>
+
+					</ol>
+					<p class="fragment"><span class="emphasized">Manual Effort</span></p>
+					<div class="ui5con-slide3 ui5-con-image"></div>
+				</section>
+
+
+				<section>
+					<h3>UI5 Migration</h3>
+					<ul>
+						<li>Analyze Codebase</li>
+						<li>Migrate Codebase</li>
+
+					</ul>
+					<p class="fragment"><span class="emphasized"><a href="https://github.com/SAP/ui5-migration">@ui5/migration</a></span></p>
+					<div class="ui5con-slide4 ui5-con-image"></div>
+				</section>
+
+				<section>
+					<h3>How to use</h3>
+					Use UI5 Migration in your apps with 3 simple steps:
+					<ol>
+						<li><code data-trim data-noescape>npm install @ui5/migration -g</code></li>
+						<li><code data-trim data-noescape>ui5-migration migrate .</code></li>
+						<li>Verify replacements</li>
+						<li>???</li>
+						<li class="fragment">Profit</li>
+					</ol>
+					<div class="ui5con-slide4 ui5-con-image"></div>
+				</section>
+
 				<section data-background-color="#000">
-					<h2 class="ui5con-divider">Divider <span class="ui5con-orange">page</span></h2>
+					<h2 class="ui5con-divider">Demo <span class="ui5con-orange">time</span></h2>
 				</section>
 
 				<section>
-					<h3>Standard Page</h3>
-					Content
-					<p class="fragment">...and more...</p>
-					<p class="fragment">...content.</p>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-						### Markdown Page
-				
-						A paragraph with some text and a [link](https://openui5.org).
-					</textarea>
+					<h3>Noteworthy</h3>
+					<ul>
+						<li>Manual verification is recommended but not mandatory</li>
+						<li>Code might be re-formatted</li>
+						<li>Factory API changes are not yet to covered, e.g. <code data-trim data-noescape>sap.ui.component</code> vs. <code data-trim data-noescape>Component.create()</code></li>
+					</ul>
+					<div class="ui5con-slide7 ui5-con-image"></div>
 				</section>
 
 				<section>
-					<section>
-						<h3>Vertical Page 1</h3>
-						Content
-					</section>
-					<section>
-						<h3>Vertical Page 2</h3>
-						Content
-					</section>
+					<h3>Useful links</h3>
+					<table>
+						<tr>
+							<td class="tdleft">UI5 Migration</td>
+							<td><a href="https://github.com/SAP/ui5-migration">@ui5/migration</a></td>
+						</tr>
+						<tr>
+							<td class="tdleft">Feedback / Issues</td>
+							<td><a href="https://github.com/SAP/ui5-migration/issues">Issues</a></td>
+						</tr>
+						<tr>
+							<td class="tdleft">Documentation</td>
+							<td><a href="https://sapui5.hana.ondemand.com/#/topic/91f23a736f4d1014b6dd926db0e91070">SDK Documentation</a></td>
+						</tr>
+						<tr>
+							<td class="tdleft">UI5ers Buzz</td>
+							<td><a href="https://blogs.sap.com/tag/ui5-evolution">UI5ers Buzz Blog</a></td>
+						</tr>
+					</table>
 				</section>
-				
+
 				<section>
-					<h3> Page With Code</h3>
-					Some Code:
-					<pre>
-						<code data-trim data-noescape>
-							var btn = new sap.m.Button({
-							   text: 'Hello World',
-							   press: function(){
-							      <mark>alert("Hello");</mark>
-							   }
-							});
-						</code>
-					</pre>
+					<h3>Q & A</h3>
+					<table>
+						<tr>
+							<td class="tdleft">WebIDE integration?</td>
+							<td>Would be awesome but nothing planned yet</td>
+						</tr>
+						<tr>
+							<td class="tdleft">Mandatory for all SAP apps?</td>
+							<td>In my opinion recommended, but not mandatory</td>
+						</tr>
+						<tr>
+							<td class="tdleft">If not migrated does code break with new version?</td>
+							<td>UI5 stays backward compatible and code migration is not required for version upgrades (but recommended)</td>
+						</tr>
+					</table>
+					<div class="ui5con-slide9 ui5-con-image"></div>
 				</section>
+
 
 				<section data-background-color="#000">
 					<div class="ui5con-thankyou ui5con-orange">Thank you.</div>
 					<div class="ui5con-logo"></div>
 					<div class="ui5con-speakerdetails">
 							Contact information:<br><br>
-							#First name Last name#<br>
-							#title#<br>
-							#contact data#<br>
+							Tobias Sorn<br>
+							Senior Developer<br>
+						<a href="mailto:tobias.sorn@sap.com">tobias.sorn@sap.com</a><br>
 					</div>
 				</section>
 			</div>
