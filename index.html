@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>UI5con@SAP 2019</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+			.reveal {
+				font-size: 58px;
+			}
+			.reveal,
+			.reveal h1,
+			.reveal h2,
+			.reveal h3,
+			.reveal h4,
+			.reveal h5,
+			.reveal h6 {
+				font-family: Arial, Helvetica, sans-serif;
+				text-transform: none;
+			}
+			.ui5con-alignleft .slides section,
+			.ui5con-alignleft .slides section > section {
+				text-align: start;
+			}
+			.reveal code,
+			.reveal pre {
+				font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+			}
+
+			.ui5con-orange {
+				color: rgb(240, 171, 0);
+			}
+			.ui5con-title {
+				width: 48%;
+				text-align: start;
+				padding-left: 1%;
+				padding-top: 2%;
+				margin-left: 0;
+				font-size: 72px;
+				font-weight: bold;
+			}
+			.ui5con-speakertitle {
+				font-size: 30px;
+				text-align: start;
+				padding-left: 1%;
+				padding-top: 5%;
+			}
+			.ui5con-aligntop .ui5con-title {
+				padding-top: 20%;
+			}
+			.ui5con-logo {
+				width: 50%;
+				height: 100%;
+				position: absolute;
+				right: 2%;
+				top: 0;
+				background-image: url(images/UI5con.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			.ui5con-aligntop .ui5con-logo {
+				top: 44%;
+			}
+			h2.ui5con-divider {
+				text-align: start;
+				font-size: 92px;
+				padding-left: 2%;
+			}
+			.ui5con-aligntop h2.ui5con-divider {
+				padding-top: 23%;
+			}
+			.ui5con-thankyou {
+				font-size: 120px;
+				font-weight: bold;
+				text-align: start;
+				padding-left: 2%;
+			}
+			.ui5con-aligntop .ui5con-thankyou {
+				padding-top: 12%;
+			}
+			.ui5con-speakerdetails {
+				font-size: 36px;
+				text-align: start;
+				padding-top: 5%;
+				padding-left: 2%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background-color="#000">
+					<div class="ui5con-title ui5con-left">
+						<div>#Title Goes Here#</div>
+						<div class="ui5con-orange">#and Here and Here#</div>
+					</div>
+					
+					<div class="ui5con-logo"></div>
+
+					<div class="ui5con-speakertitle">
+						#Speaker’s Name, Company#<br>
+						June 28, 2019			
+					</div>
+				</section>
+
+				<section data-background-color="#000">
+					<h2 class="ui5con-divider">Divider <span class="ui5con-orange">page</span></h2>
+				</section>
+
+				<section>
+					<h3>Standard Page</h3>
+					Content
+					<p class="fragment">...and more...</p>
+					<p class="fragment">...content.</p>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Markdown Page
+				
+						A paragraph with some text and a [link](https://openui5.org).
+					</textarea>
+				</section>
+
+				<section>
+					<section>
+						<h3>Vertical Page 1</h3>
+						Content
+					</section>
+					<section>
+						<h3>Vertical Page 2</h3>
+						Content
+					</section>
+				</section>
+				
+				<section>
+					<h3> Page With Code</h3>
+					Some Code:
+					<pre>
+						<code data-trim data-noescape>
+							var btn = new sap.m.Button({
+							   text: 'Hello World',
+							   press: function(){
+							      <mark>alert("Hello");</mark>
+							   }
+							});
+						</code>
+					</pre>
+				</section>
+
+				<section data-background-color="#000">
+					<div class="ui5con-thankyou ui5con-orange">Thank you.</div>
+					<div class="ui5con-logo"></div>
+					<div class="ui5con-speakerdetails">
+							Contact information:<br><br>
+							#First name Last name#<br>
+							#title#<br>
+							#contact data#<br>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				slideNumber: true,
+				hash: true,
+				history: true,
+				width: 1920,
+				height: 1080,
+				center: true, // when changing to "false", add the CSS class "ui5con-aligntop" (and optionally ui5con-alignleft") to the body tag in the HTML
+				transition: 'convex',         // none/fade/slide/convex/concave/zoom
+				backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
